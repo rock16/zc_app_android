@@ -140,4 +140,8 @@
     <string name="unread_messages">Unread messages</string>
     <string name="channels_">Channels</string>
 
+    // authentication
+    <string name="login_failed">Login Failed</string>
+    <string name="loading">Loading</string>
+
 </resources>
