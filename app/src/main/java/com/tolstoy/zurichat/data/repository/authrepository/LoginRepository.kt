@@ -7,8 +7,9 @@ import com.tolstoy.zurichat.models.loginmodel.LoginResult
 import com.tolstoy.zurichat.models.loginmodel.UserX
 import com.tolstoy.zurichat.util.networkutils.State
 import org.json.JSONObject
+import javax.inject.Inject
 
-class LoginRepository(private val loginUseCase: RemoteAuthSource) {
+class LoginRepository @Inject constructor(private val loginUseCase: RemoteAuthSource) {
     // in-memory cache of the loggedInUser object
     var user: UserX? = null
         private set

@@ -9,10 +9,14 @@ import com.tolstoy.zurichat.models.loginmodel.LoginForm
 import com.tolstoy.zurichat.models.loginmodel.LoginState
 import com.tolstoy.zurichat.models.loginmodel.UserX
 import com.tolstoy.zurichat.util.networkutils.State
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import timber.log.Timber
+import javax.inject.Inject
 
-class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
+@HiltViewModel
+class LoginViewModel @Inject constructor(private val loginRepository: LoginRepository) : ViewModel() {
 
     private val _loginResult = MutableLiveData<LoginState>()
     val loginResult: LiveData<LoginState> = _loginResult

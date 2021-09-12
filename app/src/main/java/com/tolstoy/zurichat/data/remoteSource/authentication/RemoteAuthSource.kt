@@ -5,8 +5,9 @@ import com.tolstoy.zurichat.models.loginmodel.LoginResult
 import com.tolstoy.zurichat.util.networkutils.State
 import com.tolstoy.zurichat.util.safeApiCall
 import org.json.JSONObject
+import javax.inject.Inject
 
-class RemoteAuthSource(private val service: LoginService) {
+class RemoteAuthSource @Inject constructor(private val service: LoginService) {
     /**
      * Get an authentication token from the server (zc_core) for a user
      */
